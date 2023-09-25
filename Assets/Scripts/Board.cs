@@ -39,8 +39,11 @@ public class Board : MonoBehaviour
         {
             for (int j = 0; j < boardHeight; j++)
             {
-                Destroy(allGems[i, j].gameObject);
-                allGems[i, j] = null;
+                if (allGems[i, j] != null)
+                {
+                    Destroy(allGems[i, j].gameObject);
+                    allGems[i, j] = null;
+                }
             }
         }
        SetUp();

@@ -13,6 +13,7 @@ public class RestartGame : MonoBehaviour
     public void OnRestartClick()
     {
         _timer.enabled = true;
+        _board.StopAllCoroutines();
         _board.Restart();
         _endGameWindow.SetActive(false);
         _adButton.interactable = true;
