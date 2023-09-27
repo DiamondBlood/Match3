@@ -35,6 +35,7 @@ public class Board : MonoBehaviour
 
     public void Restart()
     {
+        _controller.canSwap = true;
         for (int i = 0; i < boardWidth; i++)
         {
             for (int j = 0; j < boardHeight; j++)
